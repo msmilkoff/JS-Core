@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum Numbers</title>
+</head>
+<body>
+    
+    <input type="text" id="firstNum"> +
+    <br>
+    <input type="text" id="secondNum"> =
+    <br>
+    <input type="text" id="sum" readonly="readonly">
+    <br>
+    <input type="button" value="Calc" onclick="calc()">
+
+    <script>
+        function calc() {
+            let firstBox = document.getElementById('firstNum');
+            let secondBox = document.getElementById('secondNum');
+
+            let a = Number(firstBox.value);
+            let b = Number(secondBox.value);
+            let result = a + b;
+            let resultBox = document.getElementById('sum');
+            resultBox.value = result;
+        }
+    </script>
+
+</body>
+</html>
