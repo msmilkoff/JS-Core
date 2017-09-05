@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XmlHttpRequest Example</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<button onclick="loadRepos()">Load Repos</button>
+<div id="res"></div>
+<script>
+   function loadRepos() {
+       $.ajax({
+        url: 'https://api.github.com/users/msmilkoff/repos',
+        success: function(repos) {
+            for (let repo of repos) {
+                console.log(repo);
+                $('#res').append('<li>' + JSON.stringify(repo) + '</li>');
+            }
+        } 
+       });
+   }
+</script>
+</body>
+</html>
